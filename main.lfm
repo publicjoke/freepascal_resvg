@@ -1,0 +1,41 @@
+object MainForm: TMainForm
+  Left = 639
+  Height = 418
+  Top = 236
+  Width = 541
+  ClientHeight = 382
+  ClientWidth = 541
+  DesignTimePPI = 144
+  Menu = MainMenu
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '2.0.10.0'
+  object DisplayedImage: TImage
+    Left = 256
+    Height = 200
+    Top = 16
+    Width = 261
+    Anchors = []
+    StretchOutEnabled = False
+    StretchInEnabled = False
+  end
+  object MainMenu: TMainMenu
+    Left = 24
+    Top = 16
+    object LoadFileMI: TMenuItem
+      Caption = 'Load file...'
+      OnClick = LoadFileMIClick
+    end
+    object RendQualityMI: TMenuItem
+      Caption = 'Rendering quality'
+      Checked = True
+      OnClick = RendQualityMIClick
+    end
+  end
+  object GetSVGNameOD: TOpenDialog
+    Filter = 'Файлы SVG|*.svg'
+    Left = 120
+    Top = 16
+  end
+end
