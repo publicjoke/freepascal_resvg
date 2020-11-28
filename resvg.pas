@@ -525,7 +525,7 @@ begin
 
     SetExceptionMask(OldExceptionMask);
 
-    Result:=True;
+    Result:=resvg_error(err)=RESVG_OK;
   end;
 end;
 
